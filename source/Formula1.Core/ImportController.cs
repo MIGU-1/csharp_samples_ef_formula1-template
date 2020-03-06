@@ -39,7 +39,6 @@ namespace Formula1.Core
             }
             return races;
         }
-
         /// <summary>
         /// Aus den Results werden alle Collections, außer Races gefüllt.
         /// Races wird extra behandelt, um auch Rennen ohne Results zu verwalten
@@ -91,8 +90,6 @@ namespace Formula1.Core
             teams.Add(newTeam);
             return newTeam;
         }
-
-
         /// <summary>
         /// Gibt das Race für das Result zurück, indem das Race
         /// aus den Races auf Basis der Rennnummer gesucht wird.
@@ -105,7 +102,6 @@ namespace Formula1.Core
             int raceNumber = (int)xElement.Parent?.Parent?.Attribute("round");
             return races.Single(race => race.Number == raceNumber);
         }
-
         /// <summary>
         /// Fahrer wird aus XML für ein Result geparst.
         /// War der Fahrer schon in der Liste, wir dieser zurückgegeben.
